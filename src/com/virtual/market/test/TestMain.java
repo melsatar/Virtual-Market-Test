@@ -99,6 +99,13 @@ public class TestMain extends ActivityInstrumentationTestCase2<UserFirstActivity
 		solo.assertCurrentActivity("Expected User Manin activity", "User_MainActivity");
 		 
 	}
+	public void testViewCart() throws Exception {
+
+		solo.clickOnButton("View myCart");
+		solo.assertCurrentActivity("Expected Shopping cart activity", "Shopping_cart");
+		solo.waitForActivity("Shopping_cart");
+		solo.clickOnButton("checkout");		 
+	}
 
 
 }
